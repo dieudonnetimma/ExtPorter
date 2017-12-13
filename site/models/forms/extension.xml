@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field name="extid" type="hidden" default="0" label="COM_EXTPORTER_FORM_LBL_NONE_ID"
+		readonly="true" class="readonly"
+		description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field name="created_by" type="hidden" default="" 
+		label="COM_EXTPORTER_FORM_LBL_NONE_CREATED_BY"
+		description="COM_EXTPORTER_FORM_LBL_NONE_CREATED_BY"  /> 
+			
+			 <field name="title"
+			 type="text" 
+			  id="title"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_TITLE"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_TITLE_DESC"
+			/> 
+			
+			
+			 <field name="extname"
+			 extensionchooser
+			  id="extname"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_EXTNAME"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_EXTNAME_DESC"
+			/> 
+			
+			
+			 <field name="type"
+			  type="list" 
+			 id="type"
+			 		     label="COM_EXTPORTER_FORM_LBL_EXTENSION_TYPE"
+			 description="COM_EXTPORTER_FORM_LBL_EXTENSION_TYPE_DESC"
+			default = "Choose a Option"
+			>
+			<option value="Component">EXTENSIONSDETAILS_TYPE_COMPONENTS_OPTION</option>
+			<option value="Module">EXTENSIONSDETAILS_TYPE_MODULE_OPTION</option>
+			<option value="Plugin">EXTENSIONSDETAILS_TYPE_PLUGIN_OPTION</option>
+			<option value="Package">EXTENSIONSDETAILS_TYPE_PACKAGE_OPTION</option>
+			<option value="Library">EXTENSIONSDETAILS_TYPE_LIBRARY_OPTION</option>
+			<option value="Template">EXTENSIONSDETAILS_TYPE_TEMPLATE_OPTION</option>
+			<option value="Own Package">EXTENSIONSDETAILS_TYPE_FEATURES_OPTION</option>
+			</field> 
+			 <field name="model"
+			 type ="hidden"
+			  id="model"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_MODEL"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_MODEL_DESC"
+			/> 
+			
+			
+			 <field name="asset_id"
+			 type ="hidden"
+			  id="asset_id"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_ASSET_ID"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_ASSET_ID_DESC"
+			/> 
+			
+			
+			<field name="state" type="list"
+			        label="COM_EXTPORTER_JSTATUS"
+			        description="COM_EXTPORTER_JFIELD_PUBLISHED_DESC"
+			        class="inputbox"
+			        size="1"
+			        default="1">
+			        <option value="1">JPUBLISHED</option>
+			        <option value="0">JUNPUBLISHED</option>
+			        <option value="2">JARCHIVED</option>
+			        <option value="-2">JTRASHED</option>
+					</field> 
+			 <field name="ordering"
+			 type ="hidden"
+			  id="ordering"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_ORDERING"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_ORDERING_DESC"
+			/> 
+			
+			
+			 <field name="checked_out_time"
+			 type ="hidden"
+			  id="checked_out_time"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_CHECKED_OUT_TIME"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_CHECKED_OUT_TIME_DESC"
+			/> 
+			
+			
+			 <field name="checked_out"
+			 type ="hidden"
+			  id="checked_out"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_CHECKED_OUT"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_CHECKED_OUT_DESC"
+			/> 
+			
+			
+			 <field name="created_by"
+			 type ="hidden"
+			  id="created_by"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_CREATED_BY"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_CREATED_BY_DESC"
+			/> 
+			
+			
+			 <field name="published"
+			 type ="hidden"
+			  id="published"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_PUBLISHED"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_PUBLISHED_DESC"
+			/> 
+			
+			
+			 <field name="params"
+			 type ="hidden"
+			  id="params"
+			  label="COM_EXTPORTER_FORM_LBL_EXTENSION_PARAMS"
+			  description="COM_EXTPORTER_FORM_LBL_EXTENSION_PARAMS_DESC"
+			/> 
+			
+			
+		  
+         <field name="published" type="hidden" filter="unset" />
+		<field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+			
+		 <fields name="params">
+	  <fieldset name="local" label="COM_EXTPORTER_EXTENSIONSDETAILS_PARAMS_LOCAL__LABEL">
+        	</fieldset>
+    	 <fieldset name="global" label="COM_EXTPORTER_EXTENSIONSDETAILS_PARAMS_GLOBAL__LABEL">
+           </fieldset>
+		</fields>
+	
+	    <fields>
+		<fieldset name="accesscontrol">
+			<field name="asset_id" type="hidden" filter="unset" />
+			<field name="rules"
+			type="rules"
+			label="JFIELD_RULES_LABEL"
+			translate_label="false"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_extporter"
+			section="extensionsdetails"
+			/>
+	 </fieldset>
+	 </fields>
+</form>

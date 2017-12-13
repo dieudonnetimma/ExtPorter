@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_EXTPORTER_VIEW_EXTENSIONSDETAILS_TITLE" option="View">
+        <message><![CDATA[COM_EXTPORTER_VIEW_EXTENSIONSDETAILS_DESC]]></message>
+    </layout>
+    <fields name="params">
+    
+    <fieldset name="request"
+    	addfieldpath="/administrator/components/com_extporter/models/fields">
+    
+    	<field name="extid" type="extension"
+    		label="COM_EXTPORTER_FILTER_EXTENSION_EXTID"
+    		required="true"
+    		edit="true"
+    		clear="false"
+    	description="COM_EXTPORTER_FILTER_EXTENSION_EXTID_DESC"
+           valueColumn="extid"
+           textColumn="extid"
+          >
+      <option value="">JOPTION_SELECT_EXTID</option>
+      </field>
+    	</fieldset>
+    
+
+  <fieldset name="local" label="COM_EXTPORTER_EXTENSIONSDETAILS_PARAMS_LOCAL_LABEL">
+	</fieldset>
+	 <fieldset name="global" label="COM_EXTPORTER_EXTENSIONSDETAILS_PARAMS_GLOBAL_LABEL">
+   </fieldset>
+   
+</fields>
+</metadata>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_EXTPORTER_VIEW_EXTENSIONLIST_TITLE" option="View">
+        <message><![CDATA[COM_EXTPORTER_VIEW_EXTENSIONLIST_DESC]]></message>
+    </layout>
+    <fields name="params">
+    
+      <fieldset name="basic" label="COM_EXTPORTER_EXTENSIONLIST_ORDERING_LABEL">
+      
+    	   <field name="ordering" type="list"
+       	        label="COM_EXTPORTER_ORDERING"
+       	        description="COM_EXTPORTER_JFIELD_ORDERING_DESC"
+       	        class="inputbox"
+       	        default="extid">
+       	      <option value="extid">extid</option>  
+    <option value="extid">COM_EXTPORTER_FORM_LBL_EXTENSION_EXTID</option>
+    <option value="title">COM_EXTPORTER_FORM_LBL_EXTENSION_TITLE</option>
+    <option value="type">COM_EXTPORTER_FORM_LBL_EXTENSION_TYPE</option>
+    	    </field>
+    	    <field name="direction" type="list"
+      	        label="COM_EXTPORTER_DIRECTION"
+      	        description="COM_EXTPORTER_JFIELD_DIRECTION_DESC"
+      	        class="inputbox"
+      	        size="1"
+      	        default="ASC">
+      	        <option value="ASC">COM_EXTPORTER_DIRECTION_ASC</option>
+      	        <option value="DESC">COM_EXTPORTER_DIRECTION_DESC</option>
+      	     </field>
+    	    		   	        
+    	   <field
+    			name="start"
+    			type="int"
+    			default="0"
+    			label="COM_EXTPORTER_START_LABEL"
+    			description="COM_EXTPORTER_START_DESC" />
+    		 <field
+    			name="limit"
+    			type="int"
+    			default="10"
+    			label="COM_EXTPORTER_LIMIT_LABEL"
+    			description="COM_EXTPORTER_LIMIT_DESC" />
+    		 <field
+    			name="search"
+    			type="text"
+    			label="COM_EXTPORTER_SEARCH_LABEL"
+    			description="COM_EXTPORTER_SEARCH_DESC" />
+    	   
+    	    <field name="state" type="list"
+    	   	        label="COM_EXTPORTER_JSTATUS"
+    	   	        description="COM_EXTPORTER_JFIELD_PUBLISHED_DESC"
+    	   	        class="inputbox"
+    	   	        size="1"
+    	   	        default="1">
+    	   	        <option value="1">JPUBLISHED</option>
+    	   	        <option value="0">JUNPUBLISHED</option>
+    	   	        <option value="2">JARCHIVED</option>
+    	   	        <option value="-2">JTRASHED</option>
+    	   	    </field>
+    	</fieldset>
+    
+    	
+    	<fieldset name="filter"
+    				label="COM_EXTPORTER_EXTENSIONLIST_FILTER_LABEL">
+    	 <field
+          name="created_by"
+           addfieldpath="administrator/components/com_extporter/models/fields"
+          type="componentuser"
+          label="COM_EXTPORTER_FILTER_CREATED_BY"
+          description="COM_EXTPORTER_FILTER_CREATED_BY"
+           entity = "extension"
+          >
+          <option value="">JOPTION_SELECT_CREATED_BY</option>
+          </field>
+        <field
+           addfieldpath="administrator/components/com_extporter/models/fields"
+             name="extid"
+             type="extension"
+             label="COM_EXTPORTER_FILTER_EXTENSIONLIST_EXTID"
+             description="COM_EXTPORTER_FILTER_EXTENSIONLIST_EXTID"
+              valueColumn="extension.extid"
+              textColumn="extension.extid"
+             >
+         <option value="">JOPTION_SELECT_EXTID</option>
+      </field>
+        <field
+           addfieldpath="administrator/components/com_extporter/models/fields"
+             name="title"
+             type="extension"
+             label="COM_EXTPORTER_FILTER_EXTENSIONLIST_TITLE"
+             description="COM_EXTPORTER_FILTER_EXTENSIONLIST_TITLE"
+              valueColumn="extension.title"
+              textColumn="extension.title"
+             >
+         <option value="">JOPTION_SELECT_TITLE</option>
+      </field>
+        <field
+           addfieldpath="administrator/components/com_extporter/models/fields"
+             name="type"
+             type="extension"
+             label="COM_EXTPORTER_FILTER_EXTENSIONLIST_TYPE"
+             description="COM_EXTPORTER_FILTER_EXTENSIONLIST_TYPE"
+              valueColumn="extension.type"
+              textColumn="extension.type"
+             >
+         <option value="">JOPTION_SELECT_TYPE</option>
+      </field>
+      </fieldset>
+    
+    		
+
+  <fieldset name="local" label="COM_EXTPORTER_EXTENSIONLIST_PARAMS_LOCAL_LABEL">
+	</fieldset>
+	 <fieldset name="global" label="COM_EXTPORTER_EXTENSIONLIST_PARAMS_GLOBAL_LABEL">
+   </fieldset>
+   
+</fields>
+</metadata>

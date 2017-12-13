@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="COM_EXTPORTER_FILTER_SEARCH_DESC"
+            description="COM_EXTPORTER_FILTER_SEARCH_DESC"
+            hint="JSEARCH_FILTER"
+            />
+    <field
+            name="state"
+            type="status"
+            label="COM_EXTPORTER_FILTER_PUBLISHED"
+            description="COM_EXTPORTER_FILTER_PUBLISHED_DESC"
+
+                onchange="this.form.submit();"
+                >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+     <field
+           name="created_by"
+           type="componentuser"
+           label="COM_EXTPORTER_FILTER_CREATED_BY"
+           description="COM_EXTPORTER_FILTER_CREATED_BY"
+            entity = "extension"
+           onchange="this.form.submit();"
+           >
+       <option value="">JOPTION_SELECT_CREATED_BY</option>
+   </field>
+       <field
+            name="extid"
+            type="extension"
+            label="COM_EXTPORTER_FILTER_EXTID"
+            description="COM_EXTPORTER_FILTER_EXTID"
+             valueColumn="extension.extid"
+             textColumn="extension.extid"
+            onchange="this.form.submit();"
+            >
+        <option value="">JOPTION_SELECT_EXTID</option>
+        </field>
+       <field
+            name="title"
+            type="extension"
+            label="COM_EXTPORTER_FILTER_TITLE"
+            description="COM_EXTPORTER_FILTER_TITLE"
+             valueColumn="extension.title"
+             textColumn="extension.title"
+            onchange="this.form.submit();"
+            >
+        <option value="">JOPTION_SELECT_TITLE</option>
+        </field>
+       <field
+            name="type"
+            type="extension"
+            label="COM_EXTPORTER_FILTER_TYPE"
+            description="COM_EXTPORTER_FILTER_TYPE"
+             valueColumn="extension.type"
+             textColumn="extension.type"
+            onchange="this.form.submit();"
+            >
+        <option value="">JOPTION_SELECT_TYPE</option>
+        </field>
+         </fields>
+          <fields name="list">
+         <field name="limit" id="limit" class="input-medium" default="25" onchange="this.form.submit();" type="limitbox" >
+             <option value="">JOPTION_SELECT_LIMIT</option>
+         </field>
+         </fields>
+       </form>
