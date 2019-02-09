@@ -8,7 +8,7 @@
     
     <license>Open Source</license>
     <version>1.0.0</version>
-    <description>This component can export installed extensions with the data and create a eJSL-Model of the exported extensions</description>
+    <description>This component can export installed extensions with the data </description>
      <scriptfile>script.php</scriptfile>
     <!-- Install Section -->
     <install>
